@@ -2,6 +2,8 @@
 
 Try your site in a small computer on a desk. 10 min project by [@urre](https://twitter.com/urre)
 
+## Current build: [https://tinybrowse.now.sh/](https://tinybrowse.now.sh/)
+
 ![](https://res.cloudinary.com/urre/image/upload/v1559071510/shotsnapp-1559071460.491_fbx0vh.png)
 
 ## Develop
