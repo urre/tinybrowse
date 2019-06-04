@@ -1,0 +1,23 @@
+{
+	"files.exclude": {
+		"build": true,
+		"node_modules": true
+	},
+	"search.exclude": {
+		"build": true,
+		"node_modules": true,
+	},
+	"prettier.singleQuote": true,
+	"prettier.semi": false,
+	"prettier.useTabs": false,
+	"prettier.tabWidth": 4,
+	"terminal.integrated.fontSize": 14,
+	"[css]": {
+		"editor.formatOnSave": true,
+		"editor.formatOnPaste": true
+	},
+	"[js]": {
+		"editor.formatOnSave": true,
+		"editor.formatOnPaste": true
+	}
+}

@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "name": "tinybrowse",
+  "alias": "tinybrowse",
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@now/static-build",
+      "config": { "distDir": "build" }
+    }
+  ],
+	"regions": ["arn1", "bru"]
+}
