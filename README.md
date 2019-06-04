@@ -1,4 +1,4 @@
-# Tinybrowse
+# Tinybrowse (wip)
 
 Try your site in a small computer on a desk. 10 min project by [@urre](https://twitter.com/urre)
 
