@@ -1,11 +1,12 @@
 body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
-        'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
-        'Helvetica Neue', sans-serif;
+    font-family: 'Avenir Next W01', -apple-system, BlinkMacSystemFont,
+        'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+        'Segoe UI Emoji', 'Segoe UI Symbol';
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-weight: 500;
+    font-size: 85%;
     overflow-x: hidden;
 }
 
@@ -50,20 +51,39 @@ input {
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: scale(1);
-    background-size: 800px 460px;
-    width: 800px;
-    height: 460px;
     margin: 0 auto;
+
+    transform: scale(1);
+    background-size: 376px 235px;
+    width: 376px;
+    height: 235px;
+}
+
+@media (min-width: 40em) {
+    .environment {
+        transform: scale(1);
+        background-size: 800px 500px;
+        width: 800px;
+        height: 500px;
+    }
 }
 
 @media (min-width: 80em) {
     .environment {
         transform: scale(1);
-        background-size: 1601px 1001px;
+        background-size: 1200px 750px;
+        width: 1200px;
+        height: 750px;
+    }
+}
+
+@media (min-width: 100em) {
+    .environment {
+        transform: scale(1);
+        background-size: 1600px 1000px;
         background-position: center -100px;
-        width: 1601px;
-        height: 1001px;
+        width: 1600px;
+        height: 1000px;
     }
 }
 
@@ -87,9 +107,18 @@ input {
 
 @media (min-width: 80em) {
     .phone {
-        transform: perspective(10px) rotateX(0.01deg) scale(0.7);
+        transform: perspective(10px) rotateX(0.01deg) scale(0.5);
+        bottom: -15vh;
+        right: 0vw;
+        display: flex;
+    }
+}
+
+@media (min-width: 100em) {
+    .phone {
+        transform: perspective(10px) rotateX(0.01deg) scale(0.65);
         bottom: 2vh;
-        right: 2vw;
+        right: 4vw;
         display: flex;
     }
 }
@@ -138,15 +167,31 @@ input {
     overflow: hidden;
     border-radius: 14px;
     overflow-y: hidden;
-    height: 750px;
-    width: 1270px;
     margin: 0 auto;
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.05);
     -webkit-backface-visibility: hidden;
-    transform: scale(0.5) translateY(20px);
+    transform: scale(0.24) translateY(-30px);
+    height: 790px;
+    width: 1240px;
+}
+
+@media (min-width: 40em) {
+    .device {
+        transform: scale(0.5) translateY(-20px);
+        height: 790px;
+        width: 1270px;
+    }
 }
 
 @media (min-width: 80em) {
+    .device {
+        height: 790px;
+        width: 1270px;
+        transform: scale(0.75) translateY(-20px);
+    }
+}
+
+@media (min-width: 100em) {
     .device {
         height: 800px;
         transform: scale(1) translateY(-212px);
@@ -168,8 +213,16 @@ iframe {
 }
 
 footer {
-    font-size: 0.75rem;
     text-align: center;
-    padding-top: 0rem;
-    padding-bottom: 1rem;
+    padding: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+footer p {
+    color: black;
+}
+
+footer a {
+    color: #1da1f2;
 }

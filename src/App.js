@@ -71,7 +71,7 @@ class App extends React.Component {
 
                 <footer>
                     <p>Try your site in a small computer on a desk. * Many sites don't allow their sites to be loaded in iframes.</p>
-                    <p>10 min project by <a href="https://twitter.com/urre">@urre</a>. This site is not responsive ;). <a href="https://unsplash.com/@agkdesign?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge">Photo: agkdesign</a></p>
+                    <p>A project by <a href="https://twitter.com/urre">@urre</a> Photo <a href="https://unsplash.com/@agkdesign?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge">agkdesign</a></p>
                 </footer>
             </main>
         )
