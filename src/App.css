@@ -153,13 +153,13 @@ input {
 
 .window {
     height: 425px;
-    width: 636px;
-    transform: scale(0.5) translateY(-180px) translateX(3px);
+    width: 635px;
+    transform: scale(0.51) translateY(-180px) translateX(3px);
     position: relative;
     margin: 0 auto;
     display: flex;
     justify-content: center;
-    backface-visibility: hidden;
+    border-radius: 14px;
 }
 
 .device {
@@ -177,7 +177,7 @@ input {
 
 @media (min-width: 40em) {
     .device {
-        transform: scale(0.5) translateY(-20px);
+        transform: scale(0.5) translateY(-24px);
         height: 790px;
         width: 1270px;
     }
@@ -185,16 +185,16 @@ input {
 
 @media (min-width: 80em) {
     .device {
-        height: 790px;
+        height: 800px;
         width: 1270px;
-        transform: scale(0.75) translateY(-20px);
+        transform: scale(0.75) translateY(-32px);
     }
 }
 
 @media (min-width: 100em) {
     .device {
         height: 800px;
-        transform: scale(1) translateY(-212px);
+        transform: scale(1) translateY(-222px);
     }
 }
 
