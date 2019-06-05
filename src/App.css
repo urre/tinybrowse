@@ -153,13 +153,13 @@ input {
 
 .window {
     height: 425px;
-    width: 635px;
-    transform: scale(0.51) translateY(-180px) translateX(3px);
+    width: 636px;
+    transform: scale(0.5) translateY(-180px) translateX(3px);
     position: relative;
     margin: 0 auto;
     display: flex;
     justify-content: center;
-    border-radius: 14px;
+    backface-visibility: hidden;
 }
 
 .device {
