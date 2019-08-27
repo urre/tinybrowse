@@ -1,8 +1,8 @@
-# Tinybrowse (wip)
+# Tinybrowse
 
-Try your site in a small computer on a desk. 10 min project by [@urre](https://twitter.com/urre)
+Try your site in a small computer on a desk. A small roject by [@urre](https://twitter.com/urre)
 
-### Current build: [tinybrowse.now.sh](https://tinybrowse.now.sh/)
+### Demo[tinybrowse.now.sh](https://tinybrowse.now.sh/)
 
 ---
 
