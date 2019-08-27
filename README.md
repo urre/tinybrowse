@@ -2,7 +2,7 @@
 
 Try your site in a small computer on a desk. A small roject by [@urre](https://twitter.com/urre)
 
-### Demo[tinybrowse.now.sh](https://tinybrowse.now.sh/)
+### Demo: [tinybrowse.now.sh](https://tinybrowse.now.sh/)
 
 ---
 
