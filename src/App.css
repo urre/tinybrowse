@@ -25,6 +25,13 @@ a {
 
 .header {
     padding: 2rem;
+    display: none;
+}
+
+@media (min-width: 80em) {
+    .header {
+        display: block;
+    }
 }
 
 input {
@@ -44,7 +51,7 @@ input {
 }
 
 .environment {
-    background-image: url('device.jpg');
+    background-image: url('mac.jpg');
     background-repeat: no-repeat;
     background-position: center top;
     position: relative;
@@ -52,6 +59,8 @@ input {
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+
+    transform: perspective(10px) rotateX(0.01deg) scale(0.3);
 
     transform: scale(1);
     background-size: 376px 235px;
@@ -68,12 +77,33 @@ input {
     }
 }
 
+.environment:after {
+    width: 100%;
+    height: 100%;
+    content: 'Use this on desktop. Everything else makes no sense.';
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
 @media (min-width: 80em) {
     .environment {
         transform: scale(1);
         background-size: 1200px 750px;
         width: 1200px;
         height: 750px;
+    }
+}
+@media (min-width: 80em) {
+    .environment:after {
+        display: none;
     }
 }
 
@@ -117,8 +147,8 @@ input {
 @media (min-width: 100em) {
     .phone {
         transform: perspective(10px) rotateX(0.01deg) scale(0.65);
-        bottom: 2vh;
-        right: 4vw;
+        bottom: 9vh;
+        right: 6vw;
         display: flex;
     }
 }
@@ -154,12 +184,24 @@ input {
 .window {
     height: 425px;
     width: 635px;
-    transform: scale(0.51) translateY(-180px) translateX(3px);
+    transform: scale(0.51) translateY(-270px) translateX(-10px);
     position: relative;
     margin: 0 auto;
     display: flex;
     justify-content: center;
     border-radius: 14px;
+}
+
+@media (min-width: 40em) {
+    .window {
+        transform: scale(0.51) translateY(-240px) translateX(-10px);
+    }
+}
+
+@media (min-width: 100em) {
+    .window {
+        transform: scale(0.51) translateY(-310px) translateX(-10px);
+    }
 }
 
 .device {
@@ -172,29 +214,31 @@ input {
     -webkit-backface-visibility: hidden;
     transform: scale(0.24) translateY(-30px);
     height: 790px;
-    width: 1240px;
+    width: 1210px;
 }
 
 @media (min-width: 40em) {
     .device {
         transform: scale(0.5) translateY(-24px);
         height: 790px;
-        width: 1270px;
+        width: 1210px;
     }
 }
 
 @media (min-width: 80em) {
     .device {
-        height: 800px;
-        width: 1270px;
-        transform: scale(0.75) translateY(-32px);
+        height: 870px;
+        width: 1240px;
+        transform: scale(0.75) perspective(2000em) rotateX(20deg)
+            translateY(-102px) translateX(16px);
     }
 }
 
 @media (min-width: 100em) {
     .device {
-        height: 800px;
-        transform: scale(1) translateY(-222px);
+        height: 880px;
+        transform: scale(1) perspective(2000em) rotateX(20deg)
+            translateY(-252px) translateX(12px);
     }
 }
 
@@ -208,7 +252,6 @@ iframe {
     left: 0;
     right: 0;
     margin: 0 auto;
-    transform: perspective(10px) rotateX(0.01deg);
     overflow: hidden;
 }
 

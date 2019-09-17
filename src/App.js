@@ -13,7 +13,7 @@ class App extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            url: 'https://css-tricks.com'
+            url: 'https://github.com/blog'
         }
     }
 
@@ -39,7 +39,7 @@ class App extends React.Component {
     render() {
         return (
             <main>
-                <header className="header">
+                <header className="header" role="contentinfo">
                     <input
                         type="text"
                         onChange={this.filterHistory}
@@ -53,7 +53,7 @@ class App extends React.Component {
                     />
                 </header>
 
-                <div className="environment">
+                <div className="environment" aria-label="Macbook Pro preview environment">
                 <div className="phone"><div className="phone-screen">
                                             <iframe
                                 title="Website"
@@ -79,7 +79,7 @@ class App extends React.Component {
 
                 <footer>
                     <p>Try your site in a small computer on a desk. * Many sites don't allow their sites to be loaded in iframes. Meant to be used on desktop.</p>
-                    <p>A project by <a href="https://twitter.com/urre">@urre</a>. Code on <a href="https://github.com/urre/tinybrowse">Github</a> Photo <a href="https://unsplash.com/@agkdesign?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge">agkdesign</a></p>
+                    <p>A project by <a href="https://twitter.com/urre">@urre</a>. Code on <a href="https://github.com/urre/tinybrowse">Github</a> Photo <a href="https://unsplash.com/photos/1SAnrIxw5OY">Kari Shea</a></p>
 
                      <div style={reactButtonStyle}>
                         <Star owner='urre' repo='tinybrowse' />
