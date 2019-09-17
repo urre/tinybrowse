@@ -79,7 +79,7 @@ class App extends React.Component {
 
                 <footer>
                     <p>Try your site in a small computer on a desk. * Many sites don't allow their sites to be loaded in iframes. Meant to be used on desktop.</p>
-                    <p>A project by <a href="https://twitter.com/urre">@urre</a>. Code on <a href="https://github.com/urre/tinybrowse">Github</a> Photo <a href="https://unsplash.com/photos/1SAnrIxw5OY">Kari Shea</a></p>
+                    <p>A project by <a href="https://twitter.com/urre">@urre</a>. Code on <a href="https://github.com/urre/tinybrowse">Github</a></p>
 
                      <div style={reactButtonStyle}>
                         <Star owner='urre' repo='tinybrowse' />

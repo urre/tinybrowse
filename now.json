@@ -1,7 +1,8 @@
 {
   "version": 2,
   "name": "tinybrowse",
-  "alias": "tinybrowse",
+  "alias": ["tinybrowse.now.sh"],
+  "public": true,
   "builds": [
     {
       "src": "package.json",

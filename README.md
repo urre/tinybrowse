@@ -6,7 +6,7 @@ Try your site in a small computer on a desk. A small roject by [@urre](https://t
 
 ---
 
-![](https://res.cloudinary.com/urre/image/upload/v1559071510/shotsnapp-1559071460.491_fbx0vh.png)
+![](https://res.cloudinary.com/urre/image/upload/v1568743362/screenshots/uramja9rymieainuwnjz.png)
 
 ## Develop
 
@@ -25,12 +25,7 @@ yarn build
 
 ## Deploy
 ```shell
-deploy
-```
-
-## Release
-```shell
-yarn release
+yarn deploy
 ```
 
 Deployed on [Zeit now](https://zeit.co)
