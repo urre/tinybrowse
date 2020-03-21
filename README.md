@@ -1,8 +1,10 @@
 # Tinybrowse
 
-Try your site in a small computer on a desk. A small roject by [@urre](https://twitter.com/urre)
+Try your site in a small computer on a desk. A small project by [@urre](https://twitter.com/urre)
 
 ### Demo: [tinybrowse.now.sh](https://tinybrowse.now.sh/)
+
+> Remember: Many sites don't allow their sites to be loaded in iframes.
 
 ---
 
@@ -28,4 +30,4 @@ yarn build
 yarn deploy
 ```
 
-Deployed on [Zeit now](https://zeit.co)
+Deployed on [ZEIT now](https://zeit.co)
