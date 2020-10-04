@@ -2,7 +2,7 @@
 
 Try your site in a small computer on a desk. A small project by [@urre](https://twitter.com/urre)
 
-### Demo: [tinybrowse.now.sh](https://tinybrowse.now.sh/)
+### Demo: [tinybrowse.now.sh](https://tinybrowse.urre.vercel.app)
 
 > Remember: Many sites don't allow their sites to be loaded in iframes.
 
@@ -13,21 +13,23 @@ Try your site in a small computer on a desk. A small project by [@urre](https://
 ## Develop
 
 ```
-yarn
+npm install
 ```
 
 ```
-yarn start
+npm start
 ```
 
 ## Build
 ```shell
-yarn build
+npm run build
 ```
 
 ## Deploy
 ```shell
-yarn deploy
+npm run deploy
 ```
 
-Deployed on [ZEIT now](https://zeit.co)
+<a aria-label="Vercel logo" href="https://vercel.com">
+  <img src="https://img.shields.io/badge/Running%20On%20Vercel-000000.svg?style=for-the-badge&logo=ZEIT&labelColor=000000&logoWidth=20">
+</a>
