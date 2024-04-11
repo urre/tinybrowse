@@ -4,4 +4,4 @@ Simple tool just to frame your development site or real site in a little compute
 
 [https://tinybrowse.vercel.app/](https://tinybrowse.vercel.app/)
 
-![Screenshot](https://res.cloudinary.com/urre/image/upload/v1712827847/igfcm8xcziuguvfawvi4.webp)
+![Screenshot](https://res.cloudinary.com/urre/image/upload/w_1200/v1712827847/igfcm8xcziuguvfawvi4.webp)
