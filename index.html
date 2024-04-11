@@ -26,6 +26,7 @@
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
+        const defaultUrl = "https://react.dev"
         const inputUrl = document.querySelector("input")
         const myIframe = document.querySelector("iframe")
 
@@ -35,10 +36,8 @@
           return params.get(name)
         }
 
-        const urlParamValue = getUrlParameter("url")
-
+        const urlParamValue = getUrlParameter("url") || defaultUrl
         inputUrl.value = urlParamValue
-
         myIframe.src = urlParamValue
       })
 
