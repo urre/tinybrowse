@@ -36,18 +36,19 @@ body {
 @media (min-width: 1200px) {
   body {
     place-content: center;
-    margin: 0;
+    margin: 10vmin 0 0 0;
   }
 }
 
 p {
   text-align: center;
+  padding: 1rem;
 }
 
 input {
   position: absolute;
+  z-index: 1;
   min-width: 300px;
-  top: 5em;
   padding: 1rem;
   border-radius: 2rem;
   border: none;
@@ -57,13 +58,19 @@ input {
   text-align: center;
   outline: none;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  top: 5em;
+}
+
+@media (max-width: 1200px) {
+  input {
+    top: 1em;
+  }
 }
 
 input:focus {
   outline: 1px solid #cacaca;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
-
 
 .device-macbook-pro {
   transform: scale(0.8) perspective(600em) rotateX(10deg) translateX(16px);
