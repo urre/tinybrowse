@@ -3,7 +3,47 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Demo</title>
+    <title>Tinybrowse</title>
+
+    <meta property="og:url" content="https://tinybrowse.vercel.app/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Tinybrowse" />
+    <meta
+      property="og:image"
+      content="https://res.cloudinary.com/urre/image/upload/w_1200/v1712858916/ffpes9yefsy55nlyte5x.jpg"
+    />
+    <meta
+      property="og:image:alt"
+      content="A simple tool to view your site in a tiny computer or phone."
+    />
+    <meta
+      property="og:description"
+      content="A simple tool to view your site in a tiny computer or phone."
+    />
+    <meta property="og:site_name" content="Site Tinybrowse" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="article:author" content="Urban Sanden" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@urre" />
+    <meta name="twitter:creator" content="@urre" />
+    <meta name="twitter:url" content="https://tinybrowse.vercel.app/" />
+    <meta name="twitter:title" content="Tinybrowse" />
+    <meta
+      name="twitter:description"
+      content="A simple tool to view your site in a tiny computer or phone."
+    />
+    <meta
+      name="twitter:image"
+      content="https://res.cloudinary.com/urre/image/upload/w_1200/v1712858916/ffpes9yefsy55nlyte5x.jpg"
+    />
+
+    <meta
+      name="twitter:image:alt"
+      content="A simple tool to view your site in a tiny computer or phone.
+        computer. "
+    />
+
     <link rel="stylesheet" href="main.css" />
   </head>
 
@@ -24,13 +64,20 @@
       </div>
     </div>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const defaultUrl = "https://react.dev"
-        const inputUrl = document.querySelector("input")
-        const myIframe = document.querySelector("iframe")
+    <footer>
+      <input type="range" min="450" max="1200" value="1600" />
+      <p>
+        Simple tool just to frame your development site or real site in a little
+        computer. Remember that many production sites doesn't allow framing.
+      </p>
+      <p>Made by <a href="https://x.com/urre">@urre</a></p>
+    </footer>
 
-        // Function to get URL parameter by name
+    <script>
+      const defaultUrl = "https://react.dev"
+      const inputUrl = document.querySelector("input[type='text']")
+      const myIframe = document.querySelector("iframe")
+      document.addEventListener("DOMContentLoaded", function () {
         function getUrlParameter(name) {
           const params = new URLSearchParams(window.location.search)
           return params.get(name)
@@ -41,16 +88,25 @@
         myIframe.src = urlParamValue
       })
 
-      document.addEventListener("input", function () {
-        const url = inputUrl.value.trim()
-        myIframe.src = url
-        console.log(url)
-      })
-    </script>
+      document
+        .querySelector("input[type='text']")
+        .addEventListener("input", function () {
+          const url = inputUrl.value.trim()
+          myIframe.src = url
+        })
 
-    <p>
-      Simple tool just to frame your development site or real site in a little
-      computer. Remember that many production sites doesn't allow framing.
-    </p>
+      document
+        .querySelector("input[type='range']")
+        .addEventListener("input", function () {
+          var value = this.value
+          document.documentElement.style.setProperty("--width", value + "px")
+          console.log(value)
+          if (value <= 1000) {
+            document.documentElement.style.setProperty("--power-visibility", 0)
+          } else {
+            document.documentElement.style.setProperty("--power-visibility", 1)
+          }
+        })
+    </script>
   </body>
 </html>
