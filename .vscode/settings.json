@@ -1,0 +1,25 @@
+{
+	"files.exclude": {
+		"dist": true,
+		"node_modules": true,
+	},
+	"search.exclude": {
+		"dist": true,
+		"node_modules": true,
+		"package-lock.json": true,
+	},
+	"prettier.disableLanguages": ["html"],
+	"[html]": {
+		"editor.formatOnSave": true,
+		"editor.formatOnPaste": true
+	},
+	"terminal.integrated.fontSize": 14,
+	"[scss]": {
+		"editor.formatOnSave": true,
+		"editor.formatOnPaste": true
+	},
+	"[javascript]": {
+		"editor.formatOnSave": true,
+		"editor.formatOnPaste": true
+	}
+}

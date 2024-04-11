@@ -1,0 +1,178 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --width: clamp(300px, 80vw, 1200px);
+  --height: clamp(110px, 50vw, 800px);
+  --extra: 240px;
+  --baseHeight: 14px;
+  --mobile-breakpoint: 800px;
+  --device-silver: #e2e3e4;
+  --device-silver-dark: #474a4d;
+  --device-silver-panel: #0d0d0d;
+  --device-spacegray: #83878a;
+  --device-spacegray-dark: #515454;
+  --device-spacegray-panel: #0d0d0d;
+}
+
+body {
+  display: grid;
+  min-height: 100vh;
+  font-family: Avenir, system-ui, -apple-system, sans-serif;
+  margin: 10vmin 0 0 0;
+
+  --a: #8554d4;
+  --a-shape: ellipse 30% 30% at 29% 57%;
+  --b: #bb1dbb;
+  --b-shape: ellipse 35% 30% at 66% 47%;
+  --c: #e865c5;
+  --c-shape: ellipse 40% 25% at 50% 70%;
+  background: radial-gradient(var(--a-shape), var(--a), transparent),
+    radial-gradient(var(--b-shape), var(--b), transparent),
+    radial-gradient(var(--c-shape), var(--c), transparent);
+}
+
+@media (min-width: 1200px) {
+  body {
+    place-content: center;
+    margin: 0;
+  }
+}
+
+p {
+  text-align: center;
+}
+
+input {
+  position: absolute;
+  min-width: 300px;
+  top: 5em;
+  padding: 1rem;
+  border-radius: 2rem;
+  border: none;
+  left: calc(50% - 150px);
+  font-size: 1rem;
+  color: grey;
+  text-align: center;
+  outline: none;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+input:focus {
+  outline: 1px solid #cacaca;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+
+.device-macbook-pro {
+  transform: scale(0.8) perspective(600em) rotateX(10deg) translateX(16px);
+}
+
+@media (max-width: 1200px) {
+  .device-macbook-pro {
+    transform: none;
+  }
+}
+
+.device-frame {
+  background: black;
+  border-radius: 20px;
+  width: var(--width);
+  height: var(--height);
+  margin: 0 auto;
+  padding: 20px 19px 39px 19px;
+  position: relative;
+  transition: all 50ms;
+}
+
+@media (max-width: 1200px) {
+  .device-frame {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 9 / 16;
+    transform: scale(0.9);
+  }
+}
+
+.device-content {
+  border: none;
+  border-radius: 2px;
+  width: calc(var(--width) - 40px);
+  height: calc(var(--height) - 40px);
+  background: white;
+}
+
+@media (max-width: 1200px) {
+  .device-content {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16/9;
+  }
+}
+
+@media (max-width: 1200px) {
+  .device-power {
+    display: none;
+  }
+}
+
+.device-power {
+  background: var(--device-silver);
+  border: solid var(--device-silver-dark);
+  border-radius: 2px 2px 0 0;
+  border-width: 2px 4px 0 4px;
+  height: var(--baseHeight);
+  width: calc(var(--width) + var(--extra));
+  margin: 0 auto;
+  margin-top: -10px;
+  position: relative;
+  z-index: 9;
+}
+
+.device-power::after,
+.device-power::before {
+  content: "";
+  position: absolute;
+}
+
+.device-power::after {
+  background: var(--device-silver-dark);
+  border-radius: 0 0 10px 10px;
+  box-shadow: inset 0 0 4px 2px var(--device-silver-dark);
+  height: calc(var(--baseHeight) - 2px);
+  left: 50%;
+  margin-left: -60px;
+  top: -2px;
+  width: 120px;
+}
+
+.device-power::before {
+  background: var(--device-silver-dark);
+  border-radius: 0 0 180px 180px/ 0 0 12px 12px;
+  box-shadow: inset 0 -2px 6px 0 var(--device-silver-dark);
+  height: calc(var(--baseHeight) + 2px);
+  left: -4px;
+  margin: 0 auto;
+  top: calc(var(--baseHeight) - 4px);
+  width: calc(var(--width) + var(--extra));
+}
+
+.device-spacegray .device-frame {
+  box-shadow: inset 0 0 0 2px var(--device-spacegray-dark);
+}
+
+.device-spacegray .device-power {
+  background: var(--device-spacegray);
+  border-color: var(--device-spacegray-dark);
+}
+
+.device-spacegray .device-power::after {
+  background: var(--device-spacegray-dark);
+  box-shadow: inset 0 0 4px 2px var(--device-spacegray-dark);
+}
+
+.device-spacegray .device-power::before {
+  background: var(--device-spacegray-dark);
+  box-shadow: inset 0 -2px 6px 0 var(--device-spacegray-dark);
+}
