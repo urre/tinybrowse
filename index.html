@@ -29,11 +29,23 @@
         const inputUrl = document.querySelector("input")
         const myIframe = document.querySelector("iframe")
 
-        inputUrl.addEventListener("input", function () {
-          const url = inputUrl.value.trim()
-          myIframe.src = url
-          console.log(url)
-        })
+        // Function to get URL parameter by name
+        function getUrlParameter(name) {
+          const params = new URLSearchParams(window.location.search)
+          return params.get(name)
+        }
+
+        const urlParamValue = getUrlParameter("url")
+
+        inputUrl.value = urlParamValue
+
+        myIframe.src = urlParamValue
+      })
+
+      document.addEventListener("input", function () {
+        const url = inputUrl.value.trim()
+        myIframe.src = url
+        console.log(url)
       })
     </script>
 
