@@ -23,11 +23,11 @@ body {
   font-family: Avenir, system-ui, -apple-system, sans-serif;
   margin: 10vmin 0 0 0;
 
-  --a: #8554d4;
+  --a: #8decff;
   --a-shape: ellipse 30% 30% at 29% 57%;
   --b: #bb1dbb;
   --b-shape: ellipse 35% 30% at 66% 47%;
-  --c: #e865c5;
+  --c: #4164da;
   --c-shape: ellipse 40% 25% at 50% 70%;
   background: radial-gradient(var(--a-shape), var(--a), transparent),
     radial-gradient(var(--b-shape), var(--b), transparent),

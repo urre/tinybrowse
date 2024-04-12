@@ -48,7 +48,7 @@
   </head>
 
   <body>
-    <input type="text" placeholder="A URL here" value="https://react.dev/" />
+    <input type="text" placeholder="A URL here" value="" />
 
     <div id="macbook-pro" class="container grid-xl text-center">
       <div class="device device-macbook-pro device-spacegray">
@@ -57,7 +57,7 @@
             title="Website"
             sandbox="allow-scripts allow-same-origin"
             class="device-content"
-            src="https://react.dev/"
+            src=""
           ></iframe>
         </div>
         <div class="device-power"></div>
@@ -74,7 +74,7 @@
     </footer>
 
     <script>
-      const defaultUrl = "https://react.dev"
+      const defaultUrl = "https://example.com"
       const inputUrl = document.querySelector("input[type='text']")
       const myIframe = document.querySelector("iframe")
       document.addEventListener("DOMContentLoaded", function () {
