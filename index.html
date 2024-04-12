@@ -52,6 +52,7 @@
 
     <div id="macbook-pro" class="container grid-xl text-center">
       <div class="device device-macbook-pro device-spacegray">
+        <div class="dynamic-island"></div>
         <div class="device-frame">
           <iframe
             title="Website"
@@ -103,8 +104,24 @@
           console.log(value)
           if (value <= 1000) {
             document.documentElement.style.setProperty("--power-visibility", 0)
+            document.documentElement.style.setProperty(
+              "--dynamic-island-visibility",
+              1
+            )
+            document.documentElement.style.setProperty(
+              "--device-frame-border-radius",
+              "57px"
+            )
           } else {
             document.documentElement.style.setProperty("--power-visibility", 1)
+            document.documentElement.style.setProperty(
+              "--dynamic-island-visibility",
+              0
+            )
+            document.documentElement.style.setProperty(
+              "--device-frame-border-radius",
+              "24px"
+            )
           }
         })
     </script>

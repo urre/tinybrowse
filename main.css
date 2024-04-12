@@ -15,6 +15,8 @@
   --device-spacegray-dark: #515454;
   --device-spacegray-panel: #0d0d0d;
   --power-visibility: 1;
+  --dynamic-island-visibility: 0;
+  --device-frame-border-radius: 24px
 }
 
 body {
@@ -90,7 +92,7 @@ input:focus {
 
 .device-frame {
   background: black;
-  border-radius: 20px;
+  border-radius: calc(var(--device-frame-border-radius) + 16px);
   width: var(--width);
   height: var(--height);
   margin: 0 auto;
@@ -111,7 +113,8 @@ input:focus {
 
 .device-content {
   border: none;
-  border-radius: 2px;
+  border-radius: var(--device-frame-border-radius);
+  border-radius: var(--device-frame-border-radius);
   width: calc(var(--width) - 40px);
   height: calc(var(--height) - 40px);
   background: white;
@@ -139,10 +142,23 @@ input:focus {
   height: var(--baseHeight);
   width: calc(var(--width) + var(--extra));
   margin: 0 auto;
-  margin-top: -10px;
+  margin-top: -24px;
   position: relative;
   z-index: 9;
   opacity: var(--power-visibility);
+}
+
+.dynamic-island {
+  opacity: var(--dynamic-island-visibility);
+  border-radius: 2rem;
+  background-color: black;
+  top: 1.5rem;
+  width: 100px;
+  height: 1rem;
+  position: absolute;
+  z-index: 1;
+  left: calc(50% - 50px)
+
 }
 
 .device-power::after,
