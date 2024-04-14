@@ -48,7 +48,9 @@
   </head>
 
   <body>
-    <input type="text" placeholder="A URL here" value="" />
+    <header>
+      <input type="text" placeholder="A URL here" value="" autofocus />
+    </header>
 
     <div id="macbook-pro" class="container grid-xl text-center">
       <div class="device device-macbook-pro device-spacegray">
@@ -67,11 +69,7 @@
 
     <footer>
       <input type="range" min="450" max="1200" value="1600" />
-      <p>
-        Simple tool just to frame your development site or real site in a little
-        computer. Remember that many production sites doesn't allow framing.
-      </p>
-      <p>Made by <a href="https://x.com/urre">@urre</a></p>
+      <p>by <a href="https://x.com/urre">@urre</a></p>
     </footer>
 
     <script>
@@ -92,6 +90,7 @@
       document
         .querySelector("input[type='text']")
         .addEventListener("input", function () {
+          document.querySelector("header").classList.add("notip")
           const url = inputUrl.value.trim()
           myIframe.src = url
         })

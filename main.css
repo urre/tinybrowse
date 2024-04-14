@@ -16,14 +16,13 @@
   --device-spacegray-panel: #0d0d0d;
   --power-visibility: 1;
   --dynamic-island-visibility: 0;
-  --device-frame-border-radius: 24px
+  --device-frame-border-radius: 24px;
 }
 
 body {
   display: grid;
   min-height: 100vh;
   font-family: Avenir, system-ui, -apple-system, sans-serif;
-  margin: 10vmin 0 0 0;
 
   --a: #8decff;
   --a-shape: ellipse 30% 30% at 29% 57%;
@@ -39,7 +38,6 @@ body {
 @media (min-width: 1200px) {
   body {
     place-content: center;
-    margin: 4vmin 0 0 0;
   }
 }
 
@@ -54,8 +52,6 @@ a {
 }
 
 input[type="text"] {
-  position: absolute;
-  z-index: 1;
   min-width: 300px;
   padding: 1rem;
   border-radius: 2rem;
@@ -66,18 +62,54 @@ input[type="text"] {
   text-align: center;
   outline: none;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  top: 5em;
+  transition: 200ms ease;
 }
 
 @media (max-width: 1200px) {
   input[type="text"] {
     top: 1em;
+    padding: .5rem;
   }
 }
 
-input:focus {
-  outline: 1px solid #cacaca;
+input[type="text"]:focus {
+  outline: 2px solid blue;
+  outline-offset: 4px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+header {
+  text-align: center;
+  position: relative;
+  padding: 2vmin;
+}
+
+
+header::before {
+  content: "Change URL";
+  background-color: hsl(120, 66%, 44%);
+  padding: .35rem 0.75rem;
+  border-radius: 8px;
+  font-size: .65rem;
+  color: white;
+  position: absolute;
+  top: 0;
+  width: max-content;
+  left: calc(50% + 100px);
+  top: 1rem;
+  white-space: nowrap;
+  transform: rotate(4deg)
+}
+
+@media (min-width: 1200px) {
+  header::before {
+    content: "This is a demo. Change URL here";
+    font-size: .75rem;
+  }
+}
+
+header.notip::before {
+  display: none;
 }
 
 .device-macbook-pro {
@@ -157,8 +189,7 @@ input:focus {
   height: 1rem;
   position: absolute;
   z-index: 1;
-  left: calc(50% - 50px)
-
+  left: calc(50% - 50px);
 }
 
 .device-power::after,
